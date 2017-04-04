@@ -10,4 +10,4 @@
 UUID=78f053af-1f41-4441-a95e-8c3160662cb9 /boot                   xfs     defaults        0 0
 /dev/mapper/centos-home /home                   xfs     defaults        0 0
 /dev/mapper/centos-swap swap                    swap    defaults        0 0
-
+what your name ?
