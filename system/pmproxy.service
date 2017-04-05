@@ -1,0 +1,13 @@
+[Unit]
+Description=Proxy for Performance Metrics Collector Daemon
+Documentation=man:pmproxy(8)
+After=local-fs.target network.target pmcd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/share/pcp/lib/pmproxy start
+ExecStop=/usr/share/pcp/lib/pmproxy stop
+RemainAfterExit=yes 
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Performance Metrics Archive Logger
+Documentation=man:pmlogger(1)
+After=local-fs.target network.target pmcd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/share/pcp/lib/pmlogger start
+ExecStop=/usr/share/pcp/lib/pmlogger stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Performance Metrics Inference Engine
+Documentation=man:pmie(1)
+After=local-fs.target network.target pmcd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/share/pcp/lib/pmie start
+ExecStop=/usr/share/pcp/lib/pmie stop
+RemainAfterExit=yes 
+
+[Install]
+WantedBy=multi-user.target
